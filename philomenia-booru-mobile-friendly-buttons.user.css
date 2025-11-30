@@ -1,0 +1,56 @@
+/* ==UserStyle==
+@name           Mobile buttons for lunabooru.org
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    11/30/2025, 3:36:09 AM
+@author         luckydonald
+==/UserStyle== */
+
+@-moz-document domain("lunabooru.org") {
+	/* IMAGE PAGE: BIG BUTTONS */
+	.stretched-mobile-links > a:not(.dropdown),
+	.stretched-mobile-links > .dropdown > a,
+	.stretched-mobile-links > span.score {
+		display: flex;               /* make the link a flex container */
+		flex-direction: row;      /* stack children vertically */
+		align-items: center;         /* horizontal centering */
+		justify-content: center;     /* vertical centering */
+		min-height: 50px;               /* keep the tall clickable area */
+		text-align: center;          /* optional – centers inline text */
+		border: 0.1px dashed hotpink;
+		gap: 0.5em;
+	}
+	.stretched-mobile-links > .dropdown > a {
+		flex-direction: row;   /* works better */
+	}
+	.stretched-mobile-links > span.score {
+		display: flex;
+		flex-direction: column;
+	}
+	.stretched-mobile-links > a > i {
+		padding-bottom: 0;
+	}
+	.stretched-mobile-links > a > span {
+		flex-grow: 0;
+		padding-top: 0;
+	}
+}
+
+@-moz-document domain("lunabooru.org") {
+	/* LIST PAGE: BIG BUTTONS */
+	.media-box__header {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.media-box__header > a,
+	.media-box__header > span.score	{
+		flex-grow: 1;
+		min-height: 50px;
+		display: flex;
+		flex-direction: row;
+		align-items: center; 
+		justify-content: center;
+		text-align: center;
+		border: 0.1px dashed hotpink;
+	}
+}
